@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+#humbergur{
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+#auth-buttons button{
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid white;
+    color: white;
+    padding: 0.6rem 1.5rem;      /* increased padding */
+    margin-left: 1rem;
+    border-radius: 18px;
+    border: none;          /* smoother corners */
+    cursor: pointer;
+    font-weight: 700;            /* bolder font */
+    font-size: 1rem;             /* larger text */
+    min-width: 90px;             /* consistent width */
+    transition: background 0.3s, color 0.3s, transform 0.2s; 
+}
+#auth-buttons button:hover,
+#auth-buttons button:focus {
+  background: white;
+  color: #764ba2;
+  outline: none;
+  transform: scale(1.05);      /* subtle zoom on hover */
+}
+#auth-buttons button:hover{
+    background: #fff;color: #764ba2;
+}
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+    text-align: center;
+}
+#animated-text {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 3px solid white;
+    animation: typing 4s steps(35, end) forwards, blink 0.75s step-end infinite;
+    opacity: 0;
+    animation-delay: 0s, 4s; /* fade in first, blink after typing */
+  }
+  
+  @keyframes typing {
+    to {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+.tagline{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+@keyframes blink{
+    50%{border-color: transparent;}
+}
+#get-started{
+    background-color: #fff;
+    color: #764ba2;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: background-color .3s, color
+    .3s;
+}
+#get-started:hover{
+    background-color: #5a3780;
+    color: #fff;
+}
+@media (max-width: 600px){
+    #animated-text{
+        font-size: 1.8rem;
+    }
+
+#auth-buttons button{
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+}
+#get-started{
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+}
+}
